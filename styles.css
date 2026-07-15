@@ -1,0 +1,674 @@
+
+:root {
+    --purple-main: #070b1f;
+    --purple-light: #563d7c;
+    --color-amber: #f59e0b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.text-purple {
+    color: var(--purple-light);
+}
+.custom-header {
+  background-color: #070b1f;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #372a5c;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo-title {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: var(--color-amber); 
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--color-amber);
+}
+
+.btn-signup-nav {
+  background-color: var(--color-amber);
+  color: #070b1f !important;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: bold !important;
+}
+
+/* =========================================================================
+   3. Hero Section & Glassmorphism Styling
+   ========================================================================= */
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #070b1f 0%, #111827 100%);
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.hero-blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(245, 158, 11, 0.15);
+    border-radius: 50%;
+    filter: blur(80px);
+    top: 10%;
+    right: 5%;
+    z-index: 1;
+}
+
+.frosted-glass-card {
+    position: relative;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.hero-image-wrapper {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.custom-slider-wrapper {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 100% !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+}
+.custom-slider-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+.custom-slider-wrapper {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+.custom-slide-card {
+    scroll-snap-align: start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    padding: 20px 0;
+}
+
+.btn-purple {
+    background-color: #1d1b4c !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+.btn-purple:hover {
+    background-color: #2a276b !important;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 25px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e2e8f0;
+    margin: 0 4px;
+}
+.slider-dot.active {
+    background-color: #e83e8c;
+}
+.timeline-track {
+    position: relative;
+    padding-left: 35px;
+    border-left: 3px solid rgba(86, 61, 124, 0.2);
+    margin-left: 20px;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -19px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--purple-light), #3b82f6);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: absolute;
+    display: none;
+    background: #070b1f;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    left: 0;
+  }
+
+  .nav-menu a {
+    font-size: 16px;
+  }
+  
+  #nav-toggle:checked ~ .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    height: auto;
+    border-bottom: 2px solid #372a5c;
+  }
+
+  .logo-title {
+    font-size: 24px;
+  }
+
+  .frosted-glass-card {
+    padding: 20px;
+  }
+}
+5:24 م
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduQuest - Learning LaunchPad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="custom-header">
+        <h1 class="logo-title">EduQuest</h1>
+        
+        <input type="checkbox" id="nav-toggle">
+        
+        <label for="nav-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#slider">Featured</a></li>
+            <li><a href="#" class="btn-signup-nav">Sign Up</a></li>
+        </ul>
+    </header>
+
+    <section class="hero-section text-white d-flex align-items-center">
+        <div class="hero-blob"></div>
+        <div class="container position-relative z-index-2">
+            <div class="frosted-glass-card">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold mb-3">Build Modern Websites</h1>
+                        <p class="lead opacity-75 mb-4">Create beautiful layouts using HTML and CSS. Master responsive design and launch your tech profile.</p>
+                        <a href="#slider" class="btn btn-warning btn-lg fw-bold px-4">Get Started</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image-wrapper ratio ratio-16x9">
+                            <img src="images/hero-photo.jpg" alt="Coding Workspace" class="img-fluid object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slider" class="py-5 bg-light">
+        <div class="container" style="max-width: 700px;">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark">EduQuest Featured Courses</h2>
+                <p class="text-muted">Learn consistently, build relentlessly, and watch yourself become a great developer.</p>
+            </div>
+
+            <div class="custom-slider-wrapper shadow-sm rounded-4 bg-white p-4 p-md-5">
+                
+                <div class="custom-slide-card">
+                    <div class="text-center">
+                        <div class="mb-4 d-flex justify-content-center">
+                            <div class="course-logo-box text-danger fw-bold display-4">HTML</div>
+                        </div>
+                        <h3 class="fw-bold mb-3">HTML Course</h3>
+                        <p class="text-muted px-md-5 mb-4">Learn HTML basics and learn modern templates from scratch.</p>
+                        <a href="#" class="btn btn-purple btn-lg px-5">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="custom-slide-card">
+                    <div class="text-center">
+                        <div class="mb-4 d-flex justify-content-center">
+                            <div class="course-logo-box bg-warning text-dark fw-bold fs-2 rounded d-flex align-items-center justify-content-center" style="width:70px; height:70px;">JS</div>
+                        </div>
+                        <h3 class="fw-bold mb-3">JavaScript</h3>
+                        <p class="text-muted px-md-5 mb-4">Learn JavaScript and make your websites interactive.</p>
+                        <a href="#" class="btn btn-purple btn-lg px-5">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="custom-slide-card">
+                    <div class="text-center">
+                        <div class="mb-4 d-flex justify-content-center">
+                            <div class="course-logo-box text-white fw-bold fs-2 rounded d-flex align-items-center justify-content-center" style="width:70px; height:70px; background-color: #563d7c;">B</div>
+                        </div>
+                        <h3 class="fw-bold mb-3">Bootstrap</h3>
+                        <p class="text-muted px-md-5 mb-4">Build beautiful responsive websites using Bootstrap.</p>
+                        <a href="#" class="btn btn-purple btn-lg px-5">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="custom-slide-card">
+                    <div class="text-center">
+                        <div class="mb-4 d-flex justify-content-center">
+                            <div class="course-logo-box text-primary fw-bold display-4">Python</div>
+                        </div>
+                        <h3 class="fw-bold mb-3">Python</h3>
+                        <p class="text-muted px-md-5 mb-4">Use Python on a server to create web applications.</p>
+                        <a href="#" class="btn btn-purple btn-lg px-5">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="py-5 bg-white">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">Your Learning Roadmap</h2>
+                <p class="text-muted">Follow these structural phases to launch your technical path</p>
+            </div>
+
+            <div class="timeline-track">
+                <div class="timeline-item mb-5 position-relative">
+                    <div class="timeline-badge">1</div>
+                    <div class="card border border-light shadow-sm p-4 rounded-4 ms-3">
+                        <h4 class="fw-bold text-purple">Project Setup & Organization</h4>
+                        <p class="text-muted mb-0">Build the foundation. Arrange folder structures correctly (css, scripts, images) and map your layout before writing logic.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-5 position-relative">
+                    <div class="timeline-badge">2</div>
+                    <div class="card border border-light shadow-sm p-4 rounded-4 ms-3">
+                        <h4 class="fw-bold text-purple">Bootstrap & Custom Overrides</h4>
+                        <p class="text-muted mb-0">Infuse grid utilities and craft stunning visual components like frosted glass surfaces, hover micro-interactions, and linear gradients.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-3 position-relative">
+                    <div class="timeline-badge">3</div>
+                    <div class="card border border-light shadow-sm p-4 rounded-4 ms-3">
+                        <h4 class="fw-bold text-purple">Logic, Data & Console Execution</h4>
+                        <p class="text-muted mb-0">Deploy vanilla JavaScript execution tracks. Maintain synchronized array maps, handle target dates, and print diagnostic loops directly to the debugger console.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
+:root {
+    --purple-main: #070b1f;
+    --purple-light: #563d7c;
+    --color-amber: #f59e0b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.text-purple {
+    color: var(--purple-light);
+}
+.custom-header {
+  background-color: #070b1f;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #372a5c;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo-title {
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: var(--color-amber); 
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--color-amber);
+}
+
+.btn-signup-nav {
+  background-color: var(--color-amber);
+  color: #070b1f !important;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: bold !important;
+}
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #070b1f 0%, #111827 100%);
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.hero-blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(245, 158, 11, 0.15);
+    border-radius: 50%;
+    filter: blur(80px);
+    top: 10%;
+    right: 5%;
+    z-index: 1;
+}
+
+.frosted-glass-card {
+    position: relative;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.hero-image-wrapper {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+.custom-slider-wrapper {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 100% !important;
+    gap: 0 !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+}
+
+.custom-slider-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+.custom-slider-wrapper {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+.custom-slide-card {
+    scroll-snap-align: start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #ffffff !important;
+    padding: 20px 0;
+}
+
+.btn-purple {
+    background-color: #1d1b4c !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+.btn-purple:hover {
+    background-color: #2a276b !important;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 25px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e2e8f0;
+    margin: 0 4px;
+}
+.slider-dot.active {
+    background-color: #e83e8c;
+}
+.timeline-track {
+    position: relative;
+    padding-left: 35px;
+    border-left: 3px solid rgba(86, 61, 124, 0.2);
+    margin-left: 20px;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -19px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--purple-light), #3b82f6);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: absolute;
+    display: none;
+    background: #070b1f;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    left: 0;
+  }
+
+  .nav-menu a {
+    font-size: 16px;
+  }
+  
+  #nav-toggle:checked ~ .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    height: auto;
+    border-bottom: 2px solid #372a5c;
+  }
+
+  .logo-title {
+    font-size: 24px;
+  }
+
+  .frosted-glass-card {
+    padding: 20px;
+  }
+}
+.accordion-button{
+    font-weight:bold;
+}
+
+.accordion-button:not(.collapsed){
+    background:#070b1f;
+    color:white;
+}
+
+footer a{
+    transition:.3s;
+}
+
+footer a:hover{
+    color:#f59e0b !important;
+    padding-left:5px;
+}
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+} 
+.custom-slide-card {
+    transition: 0.4s ease;
+}
+
+.custom-slide-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,.15);
+} 
+.btn {
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+} 
+.logo-title {
+    transition: 0.3s ease;
+}
+
+.logo-title:hover {
+    transform: scale(1.08);
+}
